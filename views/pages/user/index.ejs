@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <%- include('../components/navbar') %>
+    <a href="/users/create">Register</a>
+    <h1>Daftar user (<%= users.length %>)</h1>
+    <ul>
+        <% if (users.length> 0) { %>
+            <% users.forEach(user => { %>
+                <li><a href="/users/<%= user.id  %>"><%= user.nama %></a></li>
+            <% }) %>
+        <% } else { %>
+            <p>Data masih kosong</p>
+            <% console.log('hahahahah') %>
+        <% } %>
+    </ul>
+    <%- include('../components/footer') %>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+    <link rel="" type="" href="/style.css">
+</head>
+<body>
+    <%- include('../components/navbar') %>
+    <a href="/users">kembali</a>
+
+    <h1>Detail user</h1>
+    <ul>
+        <li>Nama: <strong><%= user[0].nama %></strong></li>
+        <li>Email: <strong><%= user[0].email %></strong></li>
+    </ul>
+
+    <%- include('../components/footer') %>
+</body>
+</html>

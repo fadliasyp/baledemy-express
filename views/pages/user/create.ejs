@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=0, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('../components/navbar') %>
+    <h1>Add user</h1>
+    <form action="/users" method="POST">
+        <div class="input-group">
+            <label for="">Nama</label>
+            <input type="text" name="nama">
+        </div>
+
+        <div class="input-group">
+            <label for="">Email</label>
+            <input type="text" name="email">
+        </div>
+        
+        <button type="submit">send</button>
+        <!-- <button type="submit">send 2</button> -->
+        <a href="/users">Kembali</a>
+    </form>
+    <footer>
+        <%- include('../components/footer') %>
+    </footer>
+</body>
+</html>
